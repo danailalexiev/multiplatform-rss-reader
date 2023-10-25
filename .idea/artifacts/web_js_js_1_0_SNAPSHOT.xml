@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="web-js-js-1.0-SNAPSHOT">
+    <output-path>$PROJECT_DIR$/web-js/build/libs</output-path>
+    <root id="archive" name="web-js-js-1.0-SNAPSHOT.jar">
+      <element id="module-output" name="multiplatform-rss-reader.web-js.jsMain" />
+    </root>
+  </artifact>
+</component>
