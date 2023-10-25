@@ -2,14 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kotlin/JS Example</title>
 
+  <title>Kotlin/JS Demo</title>
+
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <script defer src="web-js.js"></script>
 
-</head>
-<body>
-  <h1>Kotlin/JS Demo</h1>
+  <style>
+    .material-theme {
+      --mdc-theme-primary: #24242e;
+      --mdc-theme-secondary: #30b593;
+      --mdc-theme-surface: #f5f5f5;
+      --mdc-theme-background: #ffffff;
+    }
 
-  <div id="root"></div>
+    .card {
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .progress-indicator {
+      width: 48px;
+      height: 48px;
+      display: block;
+      margin: auto;
+    }
+
+    [class~=mdc-circular-progress--closed] {
+      display: none;
+    }
+  </style>
+</head>
+<body class="mdc-typography material-theme">
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+        <span class="mdc-top-app-bar__title">Kotlin/JS Demo</span>
+      </section>
+    </div>
+  </header>
+  <main class="mdc-top-app-bar--fixed-adjust">
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div id="root" class="mdc-layout-grid__cell--span-12">
+          <div id="progressIndicator" class="progress-indicator mdc-circular-progress mdc-circular-progress--indeterminate" role="progressbar" aria-label="Kotlin/JS Demo Progress Bar" aria-valuemin="0" aria-valuemax="1">
+            <div class="mdc-circular-progress__determinate-container">
+              <svg class="mdc-circular-progress__determinate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <circle class="mdc-circular-progress__determinate-track" cx="24" cy="24" r="18" stroke-width="4"/>
+                <circle class="mdc-circular-progress__determinate-circle" cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="113.097" stroke-width="4"/>
+              </svg>
+            </div>
+            <div class="mdc-circular-progress__indeterminate-container">
+              <div class="mdc-circular-progress__spinner-layer">
+                <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-left">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="4"/>
+                  </svg>
+                </div>
+                <div class="mdc-circular-progress__gap-patch">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="3.2"/>
+                  </svg>
+                </div>
+                <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
+                  <svg class="mdc-circular-progress__indeterminate-circle-graphic" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" stroke-dasharray="113.097" stroke-dashoffset="56.549" stroke-width="4"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

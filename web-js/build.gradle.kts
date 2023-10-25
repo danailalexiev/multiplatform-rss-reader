@@ -27,6 +27,8 @@ kotlin {
                 implementation(kotlinx.htmlJs)
                 implementation(kotlinx.coroutinesCoreJs)
                 implementation(arrow.arrowCore)
+
+                implementation(npm("@material/circular-progress", "14.0.0"))
             }
         }
 
