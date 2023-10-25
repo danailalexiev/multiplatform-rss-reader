@@ -39,10 +39,6 @@ private fun loadFeed(onSuccess: (List<Item>) -> Unit) = scope.launch {
     }.onRight { onSuccess(it.items) }
 }
 
-private fun hideProgressIndicator() {
-    document.getElementById("progressIndicator")?.classList?.add("mdc-circular-progress--closed")
-}
-
 private fun renderFeed(items: List<Item>, onClick: (Item) -> Unit) {
     document.getElementById("root")?.let { root ->
         items.forEach {
