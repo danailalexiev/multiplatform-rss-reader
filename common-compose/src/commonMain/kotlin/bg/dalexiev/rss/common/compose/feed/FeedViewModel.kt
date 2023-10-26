@@ -40,10 +40,7 @@ class FeedViewModel(
             SourceType.RSS
         )
     ).fold(
-        {
-            it
-            FeedUiState.Error
-        },
+        { FeedUiState.Error },
         { FeedUiState.Loaded(it.items) }
     )
 

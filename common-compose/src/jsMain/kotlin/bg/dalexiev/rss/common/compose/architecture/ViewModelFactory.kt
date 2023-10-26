@@ -27,9 +27,8 @@ internal class MutableCreationExtras(initialExtras: CreationExtras) : CreationEx
     override fun <T> get(key: Key<T>): T? =
         map[key] as T?
 
-    @Suppress("UNCHECKED_CAST")
     operator fun <T> set(key: Key<T>, value: T) {
-        map[key] as T
+        map[key] = value
     }
 }
 
